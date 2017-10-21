@@ -1,0 +1,48 @@
+<!-- Comments are written on the javascript file - 'clock.js' -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stopwatch</title>
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    table th, td {
+      border: 1px solid black;
+    }
+    .background {
+      display: inline-block;
+      text-align: right;
+    }
+ </style>
+ <script src="clock.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Stopwatch</h1>
+    </div>
+    <div class="timer">
+      <h2>Time Display</h2>
+      <div class="div1">
+        <div id="time">0 h 0 m 0 s</div>
+        <br>
+        <p><input id="startstop" value="Start" type="button" onclick="handleTime(this);"></input></p>
+      </div>
+    </div>
+    <br>
+    <div class="background">
+      <button type="button" onclick="resetTable()">Reset Table</button>
+      <table id="historyTable">
+        <tr>
+          <th>Time</th>
+          <th>Time Zone</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Time Elapsed</th>
+        </tr>
+    </div>
+  </div>
+  <script>initStopwatch();</script>
+</body>
